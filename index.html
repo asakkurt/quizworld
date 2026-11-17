@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#6558e8">
+  <title>QuizWorld – Bilgi Yarışması</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="QuizWorld ana sayfa"><span class="brand-mark">Q</span> QuizWorld</a>
+      <div class="best">🏆 Rekor: <strong id="best-score">0</strong></div>
+    </header>
+
+    <section id="home" class="panel hero">
+      <div class="eyebrow">BİLGİNİ TEST ET · EĞLENEREK ÖĞREN</div>
+      <h1>Bilgini konuştur,<br><span>zirveye ulaş!</span></h1>
+      <p class="intro">Sevdiğin kategoriyi seç ve QuizWorld macerasına başla.</p>
+      <div id="categories" class="categories"></div>
+      <p class="small-note">Her soruda 15 saniyen var. Her doğru cevap 10 puan kazandırır.</p>
+    </section>
+
+    <section id="quiz" class="panel quiz hidden">
+      <div class="quiz-meta">
+        <span id="category-label">Genel Kültür</span>
+        <span id="progress">1 / 5</span>
+      </div>
+      <div class="progress-track"><div id="progress-bar"></div></div>
+      <div class="timer-row"><span>⏱️ Kalan süre</span><strong id="timer">15</strong></div>
+      <h2 id="question">Soru burada görünecek.</h2>
+      <div id="answers" class="answers"></div>
+      <p id="feedback" class="feedback" aria-live="polite"></p>
+      <button id="next-btn" class="primary hidden">Sonraki soru →</button>
+    </section>
+
+    <section id="result" class="panel result hidden">
+      <div class="result-icon">🎉</div>
+      <div class="eyebrow">YARIŞMA TAMAMLANDI</div>
+      <h2>Harika iş çıkardın!</h2>
+      <p class="score-line"><strong id="final-score">0</strong> puan</p>
+      <p id="result-detail" class="intro"></p>
+      <button id="again-btn" class="primary">Tekrar oyna</button>
+      <button id="home-btn" class="secondary">Ana sayfaya dön</button>
+    </section>
+    <footer>QuizWorld · Bilgi eğlenceye dönüşür ✨</footer>
+  </main>
+  <script src="js/questions.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
